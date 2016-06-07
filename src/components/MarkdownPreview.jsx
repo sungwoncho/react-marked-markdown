@@ -56,9 +56,9 @@ export default class MarkdownPreview extends React.Component {
 }
 
 MarkdownPreview.propTypes = {
-  value: React.propTypes.string.isRequired,
-  className: React.propTypes.string,
-  markedOptions: React.propTypes.object,
+  value: React.PropTypes.string.isRequired,
+  className: React.PropTypes.string,
+  markedOptions: React.PropTypes.object,
 };
 
 MarkdownPreview.defaultProps = {

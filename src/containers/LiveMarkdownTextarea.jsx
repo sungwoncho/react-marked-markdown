@@ -45,10 +45,10 @@ export default class LiveMarkdownTextarea extends React.Component {
 }
 
 LiveMarkdownTextarea.propTypes = {
-  onTextChange: React.propTypes.func,
-  defaultValue: React.propTypes.string,
-  placeholder: React.propTypes.string,
-  className: React.propTypes.string,
-  inputClassName: React.propTypes.string,
-  previewClassName: React.propTypes.string,
+  onTextChange: React.PropTypes.func,
+  defaultValue: React.PropTypes.string,
+  placeholder: React.PropTypes.string,
+  className: React.PropTypes.string,
+  inputClassName: React.PropTypes.string,
+  previewClassName: React.PropTypes.string,
 };

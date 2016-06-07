@@ -16,8 +16,8 @@ export default class MarkdownInput extends React.Component {
 }
 
 MarkdownInput.propTypes = {
-  onChange: React.propTypes.func,
-  value: React.propTypes.string,
-  placeholder: React.propTypes.string,
-  className: React.propTypes.string,
+  onChange: React.PropTypes.func,
+  value: React.PropTypes.string,
+  placeholder: React.PropTypes.string,
+  className: React.PropTypes.string,
 };
