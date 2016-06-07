@@ -20,37 +20,47 @@ export default class MarkdownPreview extends React.Component {
       smartLists: true,
       smartypants: false,
       langPrefix: 'hljs ',
-      highlight: (code, lang) => {
-        if (lang && hljs.LANGUAGES.hasOwnProperty(lang)) {
-          return hljs.highlight(lang, code).value;
-        } else {
-          return code;
-        }
-      },
-      ...options
+      ...options,
     };
+
+    if (typeof hljs !== 'undefined') {
+      options = {
+        ...options,
+        highlight: (code, lang) => {
+          if (!!(lang && hljs.getLanguage(lang))) {
+            return hljs.highlight(lang, code).value;
+          }
+
+          return code;
+        },
+      };
+    }
+
     marked.setOptions(options);
   }
   render() {
     const { value, className } = this.props;
     const renderer = new marked.Renderer();
-    renderer.link = ( href, title, text ) => (
-      `<a target="_blank" rel="noopener noreferrer" href="${ href }" title="${ title }">${ text }</a>`
+    renderer.link = (href, title, text) => (
+      `<a target="_blank" rel="noopener noreferrer" href="${href}" title="${title}">${text}</a>`
     );
     const html = marked(value || '', { renderer });
 
     return (
       <div
-        dangerouslySetInnerHTML={{__html: html}}
-        className={className} />
+        dangerouslySetInnerHTML={{ __html: html }}
+        className={className}
+      />
     );
   }
 }
 
 MarkdownPreview.propTypes = {
-  value: React.PropTypes.string.isRequired
+  value: React.propTypes.string.isRequired,
+  className: React.propTypes.string,
+  markedOptions: React.propTypes.object,
 };
 
 MarkdownPreview.defaultProps = {
-  value: ''
+  value: '',
 };
