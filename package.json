@@ -33,7 +33,7 @@
     "eslint-plugin-jsx-a11y": "^1.3.0",
     "eslint-plugin-react": "^5.1.1",
     "mocha": "2.x.x",
-    "nodemon": "1.7.x",
+    "nodemon": "1.10.0",
     "react-addons-test-utils": "^15.2.1",
     "react-dom": "^15.2.1"
   },
@@ -41,6 +41,6 @@
     "babel-runtime": "6.x.x",
     "highlight.js": "^9.3.0",
     "marked": "^0.3.5",
-    "react": "^0.14.8"
+    "react": "^15.2.1"
   }
 }
