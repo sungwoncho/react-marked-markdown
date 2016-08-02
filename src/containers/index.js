@@ -1,3 +1,3 @@
 import LiveMarkdownTextarea from './LiveMarkdownTextarea';
 
-export { LiveMarkdownTextarea };
+export default { LiveMarkdownTextarea };
