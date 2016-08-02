@@ -1,3 +1,6 @@
+[![Travis branch](https://img.shields.io/travis/Vincent-P/react-marked-markdown/master.svg?maxAge=2592000)]()
+[![npm version](https://badge.fury.io/js/react-marked-markdown.svg)](https://badge.fury.io/js/react-marked-markdown)
+[![npm](https://img.shields.io/npm/dt/react-marked-markdown.svg?maxAge=2592000)]()
 # React Marked Markdown
 
 A react components package that helps you use Markdown easily.
