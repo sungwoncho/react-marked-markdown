@@ -1,6 +1,7 @@
 import React from 'react';
 import marked from 'marked';
 import hljs from 'highlight.js';
+import PropTypes from 'prop-types';
 
 export default class MarkdownPreview extends React.Component {
   constructor(props) {
@@ -56,9 +57,9 @@ export default class MarkdownPreview extends React.Component {
 }
 
 MarkdownPreview.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  className: React.PropTypes.string,
-  markedOptions: React.PropTypes.object,
+  value: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  markedOptions: PropTypes.object,
 };
 
 MarkdownPreview.defaultProps = {

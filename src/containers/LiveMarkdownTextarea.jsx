@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { MarkdownPreview, MarkdownInput } from '../components';
 
@@ -45,10 +46,10 @@ export default class LiveMarkdownTextarea extends React.Component {
 }
 
 LiveMarkdownTextarea.propTypes = {
-  onTextChange: React.PropTypes.func,
-  defaultValue: React.PropTypes.string,
-  placeholder: React.PropTypes.string,
-  className: React.PropTypes.string,
-  inputClassName: React.PropTypes.string,
-  previewClassName: React.PropTypes.string,
+  onTextChange: PropTypes.func,
+  defaultValue: PropTypes.string,
+  placeholder: PropTypes.string,
+  className: PropTypes.string,
+  inputClassName: PropTypes.string,
+  previewClassName: PropTypes.string,
 };
